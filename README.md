@@ -119,16 +119,26 @@ Below is the catalog of screenshots captured:
 
 ![2_Screenshot_whatweb](2_Screenshot_whatweb.png)
 
-
 * **Exhibit C:** Nslookup DNS Resolution Output[cite:
+
+![3_Screenshot_nslookup](3_Screenshot_nslookup.png)
 
 * **Exhibit D:** Curl HTTP Response Header Inspection Output
 
+![4_Screenshot_curl-I](4_Screenshot_curl-I.png)
+
 * **Exhibit E:** Wafw00f ModSecurity Detection Output
+
+![5_Screenshot_waf](5_Screenshot_waf.png)
 
 * **Exhibit F:** DNSRecon Enumeration Output
 
+![6_Screenshot_dnsrecon](6_Screenshot_dnsrecon.png)
+
 * **Exhibit G:** Zenmap Ping Scan Live Host Results (`10.0.0.1`, `10.0.0.2`, `10.0.0.10`)
+
+![7_Screenshot_livehostSubnet](7_Screenshot_livehostSubnet.png)
 
 * **Exhibit H:** Zenmap Network Topology Map
 
+![8_Screenshot_Topology](8_Screenshot_Topology.png)
