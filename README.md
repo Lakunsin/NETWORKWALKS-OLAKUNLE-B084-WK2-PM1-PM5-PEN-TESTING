@@ -25,4 +25,42 @@ This technical report details my hands-on execution for Week 2 of the Networkwal
 My primary objective was to experience firsthand how an ethical hacker transitions from open-source intelligence (OSINT) gathering against a web property to active subnet mapping and host enumeration within a local network segment. Every command was executed from my Kali Linux terminal and Windows host workstations, capturing specific outputs, identifying system attributes, and analyzing the security posture from an attacker's vantage point.
 
 
+## 4. Tools Used
+The table below outlines the tools utilized and their respective operational functions:
 
+| Tools | Operational Function |
+| :--- | :--- |
+| **Kali Linux & Windows 11** | Operating systems utilized for reconnaissance. |
+| **Whois** | Queries public domain registries to extract ownership, registrar details, and name servers. |
+| **Whatweb** | Fingerprints web server software, content management systems, versions, and scripts. |
+| **Nslookup** | Resolves domain names to specific IPv4 addresses via public DNS resolvers. |
+| **curl -I** | Extracts HTTP response headers, server banners, cookies, and hidden routing paths. |
+| **wafw00f** | Probes target web applications to detect active Web Application Firewall (WAF) solutions. |
+| **dnsrecon** | Performs deep DNS enumeration across A, MX, NS, TXT, and SRV records. |
+| **Zenmap (Nmap GUI)** | Executes network discovery scans across local subnets to discover live hosts and MAC addresses. |
+| **Windows CMD** | Identifies local network adapter IP assignments, subnet masks, and physical hardware addresses. |
+
+
+
+## 5. Hands-On Execution & Technical Findings
+
+### 5.1 Phase 1: External Footprinting & Reconnaissance (`networkwalks.com`)
+Using my Kali Linux terminal, I systematically ran six reconnaissance utilities against `networkwalks.com` to profile its digital footprint without triggering active alarms:
+
+* **WHOIS Query:** Uncovered that the target domain is registered through GoDaddy (Registrar IANA ID: 146), created on November 6, 2019, and utilizing HostGator name servers (`NS6135` and `NS6136.HOSTGATOR.COM`) alongside Domains By Proxy privacy protection.
+* **WhatWeb Fingerprinting:** Successfully identified that the website runs on an Apache web server backend powering WordPress (specifically version `7.1.4`) and WordPress Download Manager (version `3.3.76`), with Bootstrap `7.1.4` and jQuery `3.7.1` frontend frameworks. It also leaked the primary server IP (`192.232.216.135`) and administrative email (`info@networkwalks.com`).
+* **Nslookup Resolution:** Confirmed the target domain's translation to the direct host IPv4 address `192.232.216.135` using Google Public DNS (`8.8.8.8`).
+* **Curl Header Inspection:** Inspected HTTP response headers which revealed a `301` permanent redirect handled by Really Simple Security, exposed the active `__wpdm_client` cookie with `HttpOnly` protection, and leaked the WordPress REST API endpoint (`/wp-json/`).
+* **Wafw00f Detection:** Probed the target and confirmed that `networkwalks.com` is actively protected behind a ModSecurity (SpiderLabs) Web Application Firewall, indicating that direct naive exploit payloads will face automated inspection and blocking.
+* **DNSRecon Enumeration:** Mapped out comprehensive DNS records, revealing Bind DNS version `9.16.23-RH` running on name server nodes, Google site verification tokens, SPF mail policies, and 8 distinct cPanel mail autodiscover SRV records.
+
+### 5.2 Phase 2: Internal Network Discovery & Scanning (Zenmap Lab)
+Transitioning to my Windows 11 environment, I performed local network discovery on my local network:
+
+* **Subnet Identification:** Ran `ipconfig` in the Windows command prompt to confirm local gateway and subnet configuration parameters.
+* **Ping Scan Execution:** Configured Zenmap with a Ping Scan profile (executing command `nmap -sn 10.0.0.0/24`) across the 256 address space.
+* **Live Host Discovery:** The scan completed successfully, discovering exactly **3 live hosts** up in my environment:
+  * `10.0.0.1` (MAC: `52:55:0A:00:00:01`)
+  * `10.0.0.2` (MAC: `08:00:27:77:E2:E1`)
+  * `10.0.0.10` (MAC: `08:00:27:7B:9C:3A`)
+* **Topology Export:** Generated and exported the live network node topology map in PDF format.
