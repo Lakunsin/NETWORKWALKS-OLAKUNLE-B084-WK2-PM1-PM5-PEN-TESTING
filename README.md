@@ -12,18 +12,17 @@
 | **Letter of Authorization** | Explicit Permission Confirmed |
 | **Assessment Phases** | Phase 1: Reconnaissance and Footprinting (Passive & Active)<br>Phase 2: Scanning & Network Discovery<br>Phase 3–5: In Progress |
 
----
-## 1. Liability Disclaimer & Authorization
-All technical activities documented in this report were executed strictly within the authorized permissionfrom `networkwalks.com` and my system was also included in the test[cite: 23]. This document is prepared solely for educational and professional development purposes as part of my practical cybersecurity training only[cite: 23]. Unauthorized scanning, exploitation, or data access without explicit written consent is illegal and can lead to criminal charges[cite: 23].
 
----
+## 1. Liability Disclaimer & Authorization
+All technical activities documented in this report were executed strictly within the authorized permission from `networkwalks.com` and my system was also included in the test. This document is prepared solely for educational and professional development purposes as part of my practical cybersecurity training only. Unauthorized scanning, exploitation, or data access without explicit written consent is illegal and can lead to criminal charges.
+
 
 ## 2. Executive Summary
-This technical report details my hands-on execution for Week 2 of the Networkwalks Cybersecurity program[cite: 23]. The engagement is divided into two distinct operational phases: external web footprinting using built-in Kali Linux tools and internal network discovery using Zenmap on my own local network[cite: 23].
+This technical report details my hands-on execution for Week 2 of the Networkwalks Cybersecurity program. The engagement is divided into two distinct operational phases: external web footprinting using built-in Kali Linux tools and internal network discovery using Zenmap on my own local network.
 
----
 
 ## 3. Objective
-My primary objective was to experience firsthand how an ethical hacker transitions from open-source intelligence (OSINT) gathering against a web property to active subnet mapping and host enumeration within a local network segment[cite: 23]. Every command was executed from my Kali Linux terminal and Windows host workstations, capturing specific outputs, identifying system attributes, and analyzing the security posture from an attacker's vantage point[cite: 23].
+My primary objective was to experience firsthand how an ethical hacker transitions from open-source intelligence (OSINT) gathering against a web property to active subnet mapping and host enumeration within a local network segment. Every command was executed from my Kali Linux terminal and Windows host workstations, capturing specific outputs, identifying system attributes, and analyzing the security posture from an attacker's vantage point.
 
----
+
+
