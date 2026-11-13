@@ -152,4 +152,4 @@ Below is the catalog of screenshots captured:
 **LinkedIn:** <https://www.linkedin.com/in/olakunle-o-04a51a257>
 
 ## Project Information
-**Program Name:** Cybersecurity at Networkwalks | **Week:** 02**Project:** Pentesting & Reconnaissance(Footprinting & Network Scanning)
+**Program Name:** Cybersecurity at Networkwalks | **Week:** 02 | **Project:** Pentesting & Reconnaissance(Footprinting & Network Scanning)
