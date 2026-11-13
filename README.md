@@ -85,7 +85,8 @@ Analyzing the intelligence gathered across both reconnaissance phases highlights
 ## 7. Strategic Hardening Recommendations
 To mitigate the information leakage and visibility risks identified during this assessment, I recommend the following defensive hardening measures:
 
-* **Minimize Software Version Disclosure:** Configure web servers and security plugins to suppress explicit version banners (such as WordPress and Apache version headers) to frustrate automated vulnerability fingerprinting.
+* **Minimize Software Version Disclosure:**  
+Configure web servers and security plugins to suppress explicit version banners (such as WordPress and Apache version headers) to frustrate automated vulnerability fingerprinting.
 * **Keep Software Updated:** CMS platforms, plugins, and other web technologies should be regularly updated and reviewed against current security advisories.
 * **Restrict REST API Exposure:** Limit public access to sensitive WordPress REST API endpoints (`/wp-json/`) unless required for public site functionality.
 * **Maintain and Tune WAF Rules:** Keep ModSecurity actively updated with robust rule sets (such as the OWASP Core Rule Set) to catch advanced injection and traversal attempts.
