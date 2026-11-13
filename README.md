@@ -110,6 +110,9 @@ This hands-on workflow reinforced my belief that rigorous information gathering 
 Below is the catalog of screenshots captured:
 
 * **Exhibit A:** WHOIS Domain Registration Output (`networkwalks.com`)
+![1_Screenshot_whois0](1_Screenshot_whois0.png)
+
+![1_Screenshot_whois1](1_Screenshot_whois1.png)
 
 * **Exhibit B:** WhatWeb Technology Fingerprinting Output
 
