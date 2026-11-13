@@ -87,7 +87,7 @@ To mitigate the information leakage and visibility risks identified during this 
 
 * **Minimize Software Version Disclosure:**  
 Configure web servers and security plugins to suppress explicit version banners (such as WordPress and Apache version headers) to frustrate automated vulnerability fingerprinting.
-* **Keep Software Updated:**
+* **Keep Software Updated:**  
 CMS platforms, plugins, and other web technologies should be regularly updated and reviewed against current security advisories.
 * **Restrict REST API Exposure:**  
 Limit public access to sensitive WordPress REST API endpoints (`/wp-json/`) unless required for public site functionality.
