@@ -64,3 +64,18 @@ Transitioning to my Windows 11 environment, I performed local network discovery 
   * `10.0.0.2` (MAC: `08:00:27:77:E2:E1`)
   * `10.0.0.10` (MAC: `08:00:27:7B:9C:3A`)
 * **Topology Export:** Generated and exported the live network node topology map in PDF format.
+
+## 6. Risk Assessment & Attack Surface Analysis
+Analyzing the intelligence gathered across both reconnaissance phases highlights several informational exposures and defensive considerations:
+
+| # | Risk Finding | Observation / Evidence | Security Impact | Risk Level |
+| :--- | :--- | :--- | :--- | :--- |
+| **1** | **Exact CMS & Plugin Version Leak** | WhatWeb identified WordPress `7.1.4` and WP Download Manager `3.3.76` | Attackers cross-reference specific version numbers with public vulnerability databases (CVEs) for known exploits. | 🟡 **Medium** |
+| **2** | **Direct Origin Server IP Exposed** | Nslookup mapped `networkwalks.com` to `192.232.216.135` | Bypasses edge proxies or cloud layers if misconfigured, allowing direct traffic to the underlying server. | 🟢 **Low** |
+| **3** | **Administrative REST API Path Disclosure** | Curl headers exposed `/wp-json/` endpoint | Facilitates user enumeration, author scraping, and targeted brute-force attacks against API endpoints. | 🟢 **Low** |
+| **4** | **ModSecurity WAF Fingerprinted** | Wafw00f confirmed ModSecurity (SpiderLabs) protection | Informs attackers to utilize payload encoding, obfuscation, or evasion techniques to bypass rule sets. | 🟢 **Low** |
+| **5** | **DNS Software & SRV Records Exposed** | DNSRecon mapped Bind `9.16.23-RH` and cPanel mail nodes | Provides deep structural insight into mail routing, hosting infrastructure, and potential DNS daemon flaws. | 🟡 **Medium** |
+| **6** | **Active Local Subnet Host Presence** | Zenmap ping scan mapped 3 live hosts with Oracle MACs | Exposes active virtual machines on the local network segment, aiding internal lateral movement planning. | 🟡 **Medium** |
+
+> **Risk Level Key:** 🔴 Critical | 🟡 Medium | 🟢 Low  
+> **Note:** The items cataloged above represent intelligence gathering and reconnaissance observations rather than exploited vulnerabilities. No exploitation or intrusive vulnerability testing was performed during these modules. This information does not by itself mean the system is vulnerable; further authorized security testing would be required to confirm if there are any vulnerabilities.
