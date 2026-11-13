@@ -82,3 +82,14 @@ Analyzing the intelligence gathered across both reconnaissance phases highlights
 **Note:** The items cataloged above represent intelligence gathering and reconnaissance observations rather than exploited vulnerabilities. No exploitation or intrusive vulnerability testing was performed during these modules. This information does not by itself mean the system is vulnerable; further authorized security testing would be required to confirm if there are any vulnerabilities.
 
 
+## 7. Strategic Hardening Recommendations
+To mitigate the information leakage and visibility risks identified during this assessment, I recommend the following defensive hardening measures:
+
+* **Minimize Software Version Disclosure:** Configure web servers and security plugins to suppress explicit version banners (such as WordPress and Apache version headers) to frustrate automated vulnerability fingerprinting.
+* **Keep Software Updated:** CMS platforms, plugins, and other web technologies should be regularly updated and reviewed against current security advisories.
+* **Restrict REST API Exposure:** Limit public access to sensitive WordPress REST API endpoints (`/wp-json/`) unless required for public site functionality.
+* **Maintain and Tune WAF Rules:** Keep ModSecurity actively updated with robust rule sets (such as the OWASP Core Rule Set) to catch advanced injection and traversal attempts.
+* **Audit DNS Zone Records:** Periodically review external DNS entries to ensure only necessary production services, mail servers, and verification records are publicly accessible.
+* **Conduct Regular Internal Audits:** Perform routine internal network discovery scans across local subnets to ensure all active hosts, VMs, and connected devices are accounted for and authorized.
+* **Strictly Adhere to Scope:** Ensure all reconnaissance and scanning activities remain confined to authorized testing scopes with proper documentation and management approval.
+
