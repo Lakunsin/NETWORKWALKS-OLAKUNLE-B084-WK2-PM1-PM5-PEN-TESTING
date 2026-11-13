@@ -142,3 +142,14 @@ Below is the catalog of screenshots captured:
 * **Exhibit H:** Zenmap Network Topology Map
 
 ![8_Screenshot_Topology](8_Screenshot_Topology.png)
+
+
+## Author
+**Olakunle Odesanya**  
+
+**Role:** Aspiring SOC Analyst  
+**Github:** <https://github.com/Lakunsin>  
+**LinkedIn:** <https://www.linkedin.com/in/olakunle-o-04a51a257>
+
+## Project Information
+**Program Name:** Cybersecurity at Networkwalks | **Week:** 02**Project:** Pentesting & Reconnaissance(Footprinting & Network Scanning)
