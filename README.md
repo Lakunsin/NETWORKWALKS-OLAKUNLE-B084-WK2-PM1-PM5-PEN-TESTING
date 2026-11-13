@@ -78,4 +78,7 @@ Analyzing the intelligence gathered across both reconnaissance phases highlights
 | **6** | **Active Local Subnet Host Presence** | Zenmap ping scan mapped 3 live hosts with Oracle MACs | Exposes active virtual machines on the local network segment, aiding internal lateral movement planning. | 🟡 **Medium** |
 
 > **Risk Level Key:** 🔴 Critical | 🟡 Medium | 🟢 Low  
-> **Note:** The items cataloged above represent intelligence gathering and reconnaissance observations rather than exploited vulnerabilities. No exploitation or intrusive vulnerability testing was performed during these modules. This information does not by itself mean the system is vulnerable; further authorized security testing would be required to confirm if there are any vulnerabilities.
+
+**Note:** The items cataloged above represent intelligence gathering and reconnaissance observations rather than exploited vulnerabilities. No exploitation or intrusive vulnerability testing was performed during these modules. This information does not by itself mean the system is vulnerable; further authorized security testing would be required to confirm if there are any vulnerabilities.
+
+
