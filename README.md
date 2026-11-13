@@ -100,3 +100,28 @@ Perform routine internal network discovery scans across local subnets to ensure 
 * **Strictly Adhere to Scope:**  
 Ensure all reconnaissance and scanning activities remain confined to authorized testing scopes with proper documentation and management approval.
 
+## 8. Conclusion
+Completing Week 2 of my cybersecurity internship has significantly sharpened my practical understanding of how security assessments begin. Through Footprinting, I understood how passive and active footprinting tools extract valuable metadata from public targets without sending a single malicious packet. I gained hands-on familiarity with Zenmap, learning how to discover active nodes, interpret MAC vendor fingerprints, map out network subnets, and create a network topology.
+
+This hands-on workflow reinforced my belief that rigorous information gathering is the bedrock of effective cybersecurity. Technical findings should be well documented for all stakeholders. Finally, whether analyzing web headers or scanning local lab adapters, structuring findings clearly and maintaining strict adherence to authorization boundaries are vital traits for any security professional.
+
+
+## 9. Evidence Appendix
+Below is the catalog of screenshots captured:
+
+* **Exhibit A:** WHOIS Domain Registration Output (`networkwalks.com`)
+
+* **Exhibit B:** WhatWeb Technology Fingerprinting Output
+
+* **Exhibit C:** Nslookup DNS Resolution Output[cite:
+
+* **Exhibit D:** Curl HTTP Response Header Inspection Output
+
+* **Exhibit E:** Wafw00f ModSecurity Detection Output
+
+* **Exhibit F:** DNSRecon Enumeration Output
+
+* **Exhibit G:** Zenmap Ping Scan Live Host Results (`10.0.0.1`, `10.0.0.2`, `10.0.0.10`)
+
+* **Exhibit H:** Zenmap Network Topology Map
+
